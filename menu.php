@@ -37,8 +37,7 @@ $hostname = $row["hostname"];
 
 
 $url_received = $obj['url_received'];
-////echo($url_received);
-//
+
 if ($url_received == "virtsys")
 {
 $url = 'https://10.76.125.214/resources/virtualSystemPatterns';
@@ -50,11 +49,10 @@ else
 $url = 'https://10.76.125.214/resources/environmentProfiles';
 
 }
-//echo($url) ;
+
 
 $ch = curl_init( $url);
-//$user_name = 'swanand';
-//$password = 'L0ngl1vecps';
+
 
 curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt ( $ch, CURLOPT_SSL_VERIFYHOST, false);
