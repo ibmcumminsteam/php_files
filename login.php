@@ -14,7 +14,7 @@
     }
     
     $json = file_get_contents('php://input');
-    //echo($json);
+    
     
     // decoding the received JSON and store into $obj variable.
     $obj = json_decode($json,true);
@@ -22,20 +22,16 @@
     $username = $obj['username'];
     $password = $obj['password'];
     $hostname = $obj['hostname'];
-    //echo ($username);
     
-    //echo("jkdsba");
+    
+    
     // isSet : checks if variable is not null
     
-    $sql = 'SELECT username, password, hostname FROM login_details';
-    $result = mysqli_query($conn, $sql);
     
-    //$a = 'SELECT password FROM login_details WHERE username=';
-    //$CheckSQL = $a.'"'.$username.'"';
+    
+   ]
     $CheckSQL = 'SELECT * FROM login_details WHERE username = ' .'"' .$username .'" and password = '  .'"' .$password .'" and hostname = ' .'"' .$hostname .'"' ;
-    //$CheckSQL = "SELECT * FROM login_details WHERE username='swanand' and password='L0ngl1vecps' and hostname='10.76.125.214'";
-    
-    //$CheckSQL = "SELECT * FROM login_details WHERE username='swanand' and password='L0ngl1vecps' and hostname='10.76.125.214'";
+   
     
     
     // Executing SQL Query.
